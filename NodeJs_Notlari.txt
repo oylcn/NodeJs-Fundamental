@@ -1,0 +1,84 @@
+﻿Yazdığımız javascript i node V8 e gönderir. V8 çalıştırıp cevabı node  döndürür.
+Asenkron api çağrımı yapabilme ve bunu yaparken de thread sorunu yaşanmaması en büyük artısı.
+
+DEZAVANTAJLARI
+- Yapısı farklı olduğu için node yapısına göre düşünebilmek  biraz zorlaştırabilir.
+- Küçük küçük paketler olduğundan ve bir işi yapan birden fazla seçenek oldğundan sürekli bu seçenekleri araştırıp en iyisini bulmak
+
+CTRL + L ile kodları temizler.
+
+REPL MODE
+--------------------
+Read - Eval - Print - Loop (REPL)
+
+.help ile çalıştırabilecek omoutları görebiliriz. 
+.editor ile multiline kod yazabiliriz. CTRL + D ile çalıştırabiliriz. 
+
+Yazdığımız scriptler bir dosyaya kaydetmek için .save DOSYADI.js diyebiliriz. 
+Bu dosyada geliştirme yapmak içinse $ more DOSYAADI.js diyebiliriz. 
+
+Eğer bir doya içeriğini kullanmak istiyorsak .load DOSYADI.js diyebiliriz. 
+
+TAB AND UNDERSCORE
+------------------------------
+Bir harf yazıp 2 kere Tab yapınca o harf ile başaalacak tüm opsiyonları gösterir.
+1 kere tab yapınca da eğer tek opsiyonu varsa onu yazar
+
+c [TAB]
+Array.[TAB] array ile yazıabiliecekler listelenir.
+
+_ işareti son girilen value temsil etmektedir. 
+
+Executing Scripts
+--------------------------------
+node [DOSYADI].js ile ilgili javascript dosyası çalışmış olur.
+
+[filpath] $ node [DosyaAdı].js ile yine ilgili dosya çalışmış olur.
+
+require('LIBRARY_NAME') ile ilgili library ile bir değendency oluşmaktadır. Yani bu library i kullanmış oluyoruz. 
+require("htttp") ile http modülünü kullanmış oluyoruz.
+sonrasında http.createServer(function(req,res){}) ile bir webserver oluşturmuş oluyoruz. Yalnız henüz server aktif değil. 
+server.listen(3434); diyerek çalıştırmış oluyoruz.
+
+Command Line Interface
+----------------------------------------
+node -p "os.cpus().length" ile cpu sayısını verir
+node -h ile komutları görebiliriz.
+
+
+PROCESS OBJECTS
+--------------------
+
+
+
+
+NPM
+--------------
+What it is node package?
+Node tarafından .alıştırılan js lerin bulunduğu klsörü temsil eder.
+Diğer adı ile module.
+npmjs.com sitesinde tüm package ile ilgili bilgiler bulunmaktadır. 
+
+npm install packageAdı ile yükleyebiliriz.
+npm i (install kısa adı) ile package.json daki tüm package leri yükler.
+npm i packageadı -D ile sadece developmnt ortamında kullanıcıgını belirtmiş oluruz. Böylece birşeyi deniyorsak bunu yapabiliriz. Böylece çalışan yapı etkilenmez.
+
+npm version mean:
+4.1.3
+4 => Buraası değişirse büyük bir değişiklik olmuş dmektir. Kodun değiştirilmesi gerekebilir. 
+1 => Burası değişirse küçük değişiklikler olmuştur ama bu bizim kodumuzun değiştirilmesine gerektire.
+3 => Burası değşirse muhtemeln bir bugfix edilmiştir. Yani küçük iyileştirmeler yapılmıştır. 
+
+^4.1.3 olduğunda  uyumlu paketler yüklenebilir deek oluyor.
+kontrol için semver.npmjs.com kullanılabilir. 
+
+$ npx packageAdı ile ilgili package i çalıştırmış olur.
+$ npm ls komutu tüm package ve dependecy lerini listeler.
+$ npm outdated komutu ile package içinde güncel versiyonları olup olmadığı ve hangi versiyona güncellenebileceği listelenir. Wanted kolonu içinde sistemin güncelleyebileceği versiyon listelenir
+$ npm update ile güncelleme yapılır.
+$ npm i packageAdi@versiyonNo ile ilgili versiyon yüklenir. 
+$ npm i packageAdi@lastest ile son versiyonu yüklenir.
+ 
+
+
+
